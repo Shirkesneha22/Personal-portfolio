@@ -51,6 +51,14 @@
     color: #ffcc00;
 }
 
+.profile-photo{
+    height: 13%;
+    width: 15%;
+    border-radius: 50%;   /* Will make it oval if width ≠ height */
+    object-fit: cover;
+}
+
+
 /* Sections */
 section {
     padding: 80px 10%;
