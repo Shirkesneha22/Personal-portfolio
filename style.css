@@ -53,7 +53,7 @@
 
 .profile-photo{
     height: auto;
-    width: Auto;
+    width: 20%;
     border-radius: 50%;   /* Will make it oval if width ≠ height */
     object-fit: cover;
 }
