@@ -26,3 +26,25 @@ window.addEventListener("scroll", function () {
     const progress = (scrollTop / docHeight) * 100;
     document.getElementById("progress-bar").style.width = progress + "%";
 });
+
+
+// Animate progress bars when in view
+const progressSpans = document.querySelectorAll('.progress-bar span');
+
+function animateProgress() {
+    progressSpans.forEach(span => {
+    const value = span.getAttribute('data-progress');
+    span.style.width = value + '%';
+    });
+}
+
+window.addEventListener('scroll', () => {
+    const skillsSection = document.querySelector('#skills');
+    const position = skillsSection.getBoundingClientRect().top;
+    const screenHeight = window.innerHeight;
+
+    if (position < screenHeight - 100) {
+    animateProgress();
+    }
+});
+
