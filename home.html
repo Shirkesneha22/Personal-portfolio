@@ -33,7 +33,6 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="container text-center">
-            <img src="profilephoto.jpg" alt="profile photo" class="profile-photo">
             <h1>Hello, I'm <span class="highlight"> Sneha Balu Shirke </span></h1>
             <p>Software Developer — Crafting responsive web apps with React.js, Angular, .NET, MySQL, and modern UI frameworks. </p>
         </div>
@@ -200,37 +199,40 @@
     <!-- Contact Section -->
 <!-- 🌟 Get in Touch Section -->
 <section class="contact-section" id="contact" style="background-color: #111">
-<div class="container">
-    <h2 class="section-title" style="color: aliceblue;">Get in Touch</h2>
-    <p class="section-subtitle">I'd love to connect! Drop me a message or reach out directly.</p>
+  <div class="container">
+    <div class="contact-box">
+      <h2 class="section-title" style="color: #111;">Get in Touch</h2>
+      <p class="section-subtitle" style="color: #555; margin-bottom:18px;">I'd love to connect! Drop me a message or reach out directly.</p>
 
-    <!-- Netlify Form -->
-    <form name="contact" method="POST" data-netlify="true" class="contact-form">
+      <!-- Netlify Form -->
+      <form name="contact" method="POST" data-netlify="true" class="contact-form">
         <input type="hidden" name="form-name" value="contact">
 
-    <div class="form-group">
-        <input type="text" name="name" placeholder="Your Name" required>
-    </div>
-    <div class="form-group">
-        <input type="email" name="email" placeholder="Your Email" required>
+        <div class="form-group">
+          <input type="text" name="name" placeholder="Your Name" required>
         </div>
         <div class="form-group">
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
         </div>
         <button type="submit" class="btn-send">Send Message</button>
-    </form>
+      </form>
+    </div>
 
-    <!-- Contact Info -->
-    <div class="contact-info">
-        <p><strong>📞 Mobile:</strong> +91 7888076881</p>
-    <div class="social-links">
+    <!-- Contact Info (kept outside box, below) -->
+    <div class="contact-info" style="margin-top:22px; color: aliceblue;">
+      <p><strong>📞 Mobile:</strong> +91 7888076881</p>
+      <div class="social-links">
         <a href="https://github.com/Shirkesneha22" target="_blank">🐙 GitHub</a>
         <a href="https://www.linkedin.com/in/sneha-shirke-1b060428a/" target="_blank">💼 LinkedIn</a>
-        <a href="mailto:"snehashirke221@gmail.com"" target="_blank">>📧 Email</a>
+        <a href="mailto:snehashirke221@gmail.com" target="_blank">📧 Email</a>
+      </div>
     </div>
-    </div>
-</div>
+  </div>
 </section>
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
