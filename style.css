@@ -385,3 +385,70 @@ section {
 }
 
 
+
+
+.contact-section {
+.contact-section {
+  background: #111;
+  min-height: 100vh;               /* take full screen height */
+  display: flex;
+  justify-content: center;         /* center horizontally */
+  align-items: center;             /* center vertically */
+  padding: 40px 15px;
+}
+}
+
+.contact-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 34px 26px;
+  width: 100%;
+  max-width: 640px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+/* inside card title and subtitle */
+.contact-box .section-title { color: #111; margin-bottom: 8px; }
+.contact-box .section-subtitle { color: #444; margin-bottom: 14px; }
+
+/* form inside card */
+.contact-box .contact-form input,
+.contact-box .contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  background: #fafafa;
+}
+
+.contact-box .btn-send {
+  display: block;
+  width: 100%;
+  background: #ff6b81;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  transition: transform .15s ease, background .15s ease;
+}
+.contact-box .btn-send:hover { transform: translateY(-2px); background: #ff4757; }
+
+/* on tablets */
+@media (max-width: 768px) {
+  .contact-box { padding: 26px 18px; max-width: 90%; }
+  .contact-box .section-title { font-size: 1.7rem; }
+}
+
+/* on mobile phones */
+@media (max-width: 480px) {
+  .contact-section { padding: 40px 12px; }
+  .contact-box { padding: 18px 12px; border-radius: 12px; max-width: 100%; }
+  .contact-box .section-title { font-size: 1.4rem; }
+  .contact-box .contact-form input, .contact-box .contact-form textarea { font-size: 0.95rem; padding: 10px 12px; }
+  .contact-box .btn-send { font-size: 0.95rem; padding: 10px; }
+}
