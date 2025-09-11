@@ -325,3 +325,71 @@ section {
     z-index: 9999;
     width: 0%;
 }  
+
+
+
+/* Responsive skills layout and mobile tweaks */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;            /* consistent spacing between chips */
+  align-items: center;
+}
+
+/* default skill chip styling (desktop/tablet) */
+.skills span {
+  display: inline-block;
+  margin: 6px;
+  padding: 12px 24px;   /* slightly reduced default */
+  font-size: 1.1rem;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+/* Project cards default (smaller margin/padding ok) */
+.project-card {
+  padding: 18px;
+  margin: 10px;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 600px) {
+  /* reduce vertical section padding so content fits better */
+  section {
+    padding: 40px 6%;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  /* make skill chips smaller on narrow screens */
+  .skills span {
+    padding: 8px 14px;   /* much smaller on mobile */
+    font-size: 0.95rem;
+    margin: 6px 4px;
+    border-radius: 24px;
+  }
+
+  /* project cards a bit tighter */
+  .project-card {
+    padding: 12px;
+    margin: 8px 6px;
+    font-size: 0.95rem;
+  }
+
+  /* navbar brand smaller */
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
+
+/* optional: even smaller devices */
+@media (max-width: 380px) {
+  .skills span {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+  section { padding: 32px 5%; }
+}
