@@ -383,3 +383,32 @@ section {
   /* ensure chips inside a card don't overflow */
   .skill-card * { word-wrap: break-word; }
 }
+
+
+/* ---- Responsive Project Cards ---- */
+
+/* Tablets and below */
+@media (max-width: 900px) {
+  .projects-container {
+    justify-content: center;   /* keep cards centered */
+    gap: 16px;
+  }
+
+  .project-card {
+    width: 45%;                /* 2 cards per row on medium screens */
+    max-width: 300px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 600px) {
+  .projects-container {
+    flex-direction: column;    /* stack cards in a single column */
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;                /* take most of the screen width */
+    max-width: 100%;
+  }
+}
