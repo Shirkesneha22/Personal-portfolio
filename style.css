@@ -262,12 +262,23 @@ section {
   font-size: 1rem;
   transition: 0.3s ease;
 }
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #ff6b81;
-  box-shadow: 0 0 8px rgba(255, 107, 129, 0.3);
+/* Contact form input/textarea hover effect */
+.contact-box .contact-form input:hover,
+.contact-box .contact-form textarea:hover {
+  border-color: #0a043f;                  /* highlight border */
+  background: #fff;                      /* make background pop */
+  box-shadow: 0 0 8px rgba(11, 69, 229, 0.5);
+  transition: all 0.25s ease-in-out;
 }
+
+/* Keep focus effect strong */
+.contact-box .contact-form input:focus,
+.contact-box .contact-form textarea:focus {
+  border-color: #0a043f;                 /* darker pink border */
+  box-shadow: 0 0 8px rgba(11, 69, 229, 0.5);
+  outline: none;
+}
+
 
 .btn-send {
   background: #ff6b81;
@@ -406,7 +417,16 @@ section {
   max-width: 640px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.15);
   text-align: center;
+  animation: float 1s ease-in-out infinite;
+  animation-direction: alternate;
 }
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
 
 /* inside card title and subtitle */
 .contact-box .section-title { color: #111; margin-bottom: 8px; }
