@@ -51,14 +51,6 @@
     color: #ffcc00;
 }
 
-.profile-photo{
-    height: 13%;
-    width: 20%;
-    border-radius: 50%;   /* Will make it oval if width ≠ height */
-    object-fit: cover;
-}
-
-
 /* Sections */
 section {
     padding: 80px 10%;
@@ -154,7 +146,7 @@ section {
 /* Project card */
 .project-card {
     background: #fff;
-    color: #333;
+    color: #ffffff;
     width: 320px;
     padding: 20px;
     border-radius: 15px;
@@ -175,7 +167,7 @@ section {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 15px;
-    color: #222;
+    color: #ffffff;
 }
 
 /* Features list */
@@ -221,6 +213,8 @@ section {
 .project-card:nth-child(1) { animation-delay: 0.2s; }
 .project-card:nth-child(2) { animation-delay: 0.4s; }
 .project-card:nth-child(3) { animation-delay: 0.6s; }
+.project-card:nth-child(4) { animation-delay: 0.8s; }
+.project-card:nth-child(5) { animation-delay: 0.9s; }
 
 
 /* Contact */
@@ -471,4 +465,34 @@ section {
   .contact-box .section-title { font-size: 1.4rem; }
   .contact-box .contact-form input, .contact-box .contact-form textarea { font-size: 0.95rem; padding: 10px 12px; }
   .contact-box .btn-send { font-size: 0.95rem; padding: 10px; }
+}
+
+
+
+body {
+  background-color: #0F172A;
+  color: #E2E8F0;
+}
+
+.section-title {
+  color: #FFFFFF;
+}
+
+.card, .skill-card, .project-card {
+  background-color: #1E293B;
+  border: none; /* or subtle border if needed */
+}
+
+.btn, .btn-send {
+  background-color: #38BDF8;
+  color: #0F172A;
+}
+
+.btn:hover {
+  background-color: #60A5FA;
+}
+
+.contact-box {
+  background-color: #1E293B;
+  color: #E2E8F0;
 }
