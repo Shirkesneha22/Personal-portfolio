@@ -328,68 +328,58 @@ section {
 
 
 
-/* Responsive skills layout and mobile tweaks */
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;            /* consistent spacing between chips */
-  align-items: center;
+/* ---- Mobile overrides for skills (add this at the very end of style.css) ---- */
+
+/* Make the skills grid adapt to narrow screens and prevent huge cards */
+@media (max-width: 900px) {
+  /* reduce the minimum column width so cards can shrink and fit */
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 18px;
+    padding: 0 6px;
+  }
+
+  /* reduce card padding / font sizes so each card takes less vertical space */
+  .skill-card {
+    padding: 18px 14px;        /* smaller card padding on tablets/phones */
+    border-radius: 12px;
+  }
+
+  .skill-card .icon {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+  }
+
+  .skill-card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+  }
+
+  .skill-card p {
+    font-size: 0.88rem;
+    margin-bottom: 12px;
+  }
+
+  /* make the progress bars slightly thinner on mobile */
+  .progress-bar { height: 8px; }
+  .progress-bar span { border-radius: 12px; }
 }
 
-/* default skill chip styling (desktop/tablet) */
-.skills span {
-  display: inline-block;
-  margin: 6px;
-  padding: 12px 24px;   /* slightly reduced default */
-  font-size: 1.1rem;
-  border-radius: 30px;
-  white-space: nowrap;
-}
-
-/* Project cards default (smaller margin/padding ok) */
-.project-card {
-  padding: 18px;
-  margin: 10px;
-}
-
-/* Mobile-specific adjustments */
-@media (max-width: 600px) {
-  /* reduce vertical section padding so content fits better */
-  section {
-    padding: 40px 6%;
+/* Extra-tight layout for small phones */
+@media (max-width: 420px) {
+  .skills-container {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
   }
 
-  .hero h1 {
-    font-size: 1.6rem;
+  .skill-card {
+    padding: 12px 10px;
   }
 
-  /* make skill chips smaller on narrow screens */
-  .skills span {
-    padding: 8px 14px;   /* much smaller on mobile */
-    font-size: 0.95rem;
-    margin: 6px 4px;
-    border-radius: 24px;
-  }
+  .skill-card .icon { font-size: 1.8rem; }
+  .skill-card h3 { font-size: 1rem; }
+  .skill-card p { font-size: 0.82rem; }
 
-  /* project cards a bit tighter */
-  .project-card {
-    padding: 12px;
-    margin: 8px 6px;
-    font-size: 0.95rem;
-  }
-
-  /* navbar brand smaller */
-  .navbar-brand {
-    font-size: 1.2rem;
-  }
-}
-
-/* optional: even smaller devices */
-@media (max-width: 380px) {
-  .skills span {
-    padding: 6px 10px;
-    font-size: 0.85rem;
-  }
-  section { padding: 32px 5%; }
+  /* ensure chips inside a card don't overflow */
+  .skill-card * { word-wrap: break-word; }
 }
