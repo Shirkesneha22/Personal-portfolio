@@ -412,3 +412,47 @@ section {
     max-width: 100%;
   }
 }
+
+
+
+/* ---- Override: make project cards appear side-by-side on small screens ---- */
+
+/* Use a responsive grid so cards form rows and wrap naturally */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  align-items: start;
+  justify-items: center; /* keeps cards centered in each grid cell */
+  padding: 18px;
+}
+
+/* Ensure each card fills its grid cell (instead of fixed 320px) */
+.project-card {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 18px;
+  margin: 0; /* grid gap handles spacing */
+}
+
+/* Medium phones / small tablets: try two cards per row */
+@media (max-width: 900px) {
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+/* Small phones: keep two columns if space allows, otherwise it will become single column */
+@media (max-width: 420px) {
+  .projects-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .project-card {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}
